@@ -1304,21 +1304,22 @@ D) 4.0
 ---
 
 ### Q66
-**EN**: What is the output?
+**EN**: What is TRUE about the following code?
 ```python
 import random
 random.seed(42)
 print(random.randint(1, 10))
+print(random.randint(1, 10))
 ```
-A) 一个 1 到 10 之间的随机数
-B) 始终是 7（对于 seed 42）
-C) 始终是 42
-D) Error
+A) The two printed values are always different
+B) The two printed values are always the same (deterministic for the same seed)
+C) The output changes every time the script is run
+D) The seed value 42 causes an error
 
-**CN**: 以下代码的输出是什么？
+**CN**: 关于以下代码，哪种说法是正确的？
 
 ✅ **正确答案 / Answer: B**
-> `random.seed(42)` 固定随机数生成器的种子。使用 seed 42 时，Python 的 `randint(1, 10)` 稳定输出 7。（注：不同 Python 版本可能略有不同，但在同一版本下始终一致。）
+> `random.seed(42)` 固定了随机数生成器的初始状态。同一 seed 下，随机数序列是完全确定的——每次运行脚本都会生成相同的序列。注：不同 Python 版本之间 seed 产生的具体值可能不同，但同版本内始终保持一致。
 
 ---
 
